@@ -13,12 +13,12 @@ user_email='$email', user_tel='$tel' WHERE user_id = $id";
 if ($conn->query($sql) === TRUE) {
     echo '<script language="JavaScript">
             alert("อัปเดตข้อมูลสำเร็จ");
-            window.location="list.php";
+            window.location="index.php?menu=list";
             </script>';
 } else {
     echo '<script language="JavaScript">
             alert("ไม่สามารถอัปเดตข้อมูลได้");
-            window.location="list.php";
+            window.location="index.php?menu=list";
             </script>';
 }
 

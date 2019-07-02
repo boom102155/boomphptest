@@ -9,15 +9,11 @@ include("connect_db.php");
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>user list</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script> -->
 
-    <style>
-        body{
-            padding-top: 5rem;
-        }
-    </style>
+    
 </head>
 <body>
     <div class="container">

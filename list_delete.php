@@ -6,12 +6,12 @@
     if ($conn->query($sql) === TRUE) {
         echo '<script language="JavaScript">
                 alert("ลบข้อมูลสำเร็จ");
-                window.location="list.php";
+                window.location="index.php?menu=list";
                 </script>';
     } else {
         echo '<script language="JavaScript">
                 alert("ไม่สามารถลบข้อมูลได้");
-                window.location="list.php";
+                window.location="index.php?menu=list";
                 </script>';
     } 
     $conn->close();

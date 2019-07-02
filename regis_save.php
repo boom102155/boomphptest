@@ -12,13 +12,13 @@
     if ($conn->query($sql) === TRUE) {
         echo '<script language="JavaScript">
                 alert("บันทึกข้อมูลเรียบร้อย");
-                window.location="regis.php";
+                window.location="index.php?menu=regis";
                 </script>';
 
     } else {
         echo '<script language="JavaScript">
                 alert("ไม่สามารถบันทึกข้อมูลได้");
-                window.location="regis.php";
+                window.location="index.php?menu=regis";
                 </script>';
     }
 

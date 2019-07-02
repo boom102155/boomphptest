@@ -6,14 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Register</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <style>
-        body{
-            padding-top: 5rem;
-        }
-    </style>
+    <script src="js/jquery.min.js"></script> -->
+    
 </head>
 <body>
     <div class="container">
