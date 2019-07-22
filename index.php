@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("connect_db.php");
 ?>
 <!DOCTYPE html>
@@ -21,9 +22,15 @@ include("connect_db.php");
     </style>
 </head>
 <body>
+
+    <?php
+        if(!empty($_SESSION["user"])){
+    ?>
+        
+    
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.php">PHP</a>
+        <a class="navbar-brand" href="index.php?menu=home">PHP</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,7 +38,7 @@ include("connect_db.php");
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php?menu=home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?menu=regis">Register</a>
@@ -52,22 +59,44 @@ include("connect_db.php");
                 </li> -->
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <a class="nav-link" href="#" style="color: white;">
+                    <?php
+                        echo "สวัสดี " . $_SESSION["user"];
+                    ?>
+                </a>
+                <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+                <a class="btn btn-outline-success my-2 my-sm-0" href="index.php?menu=logout">Logout</a>
             </form>
         </div>
     </nav>
     
+    
     <?php 
     if(isset($_GET['menu'])){ 
-        if($_GET['menu'] == "regis"){
+        if($_GET['menu'] == "home"){
+            include("home.php");
+        }else if($_GET['menu'] == "regis"){
             include("regis.php");
         }else if($_GET['menu'] == "list"){
             include("list.php");
+        }else if($_GET['menu'] == "logout"){
+            header( "location: login.php" );
+            session_destroy();
         }
-    }
+    }  
 	?>
 
+    <?php
+        }else{
+            ?>
+            <div class="container">
+            <?php echo 'You are not logged in. <a href="login.php">Click here</a> to log in.'; ?>
+            </div>
+        <?php
+        }
+    ?>
     
+    
+
 </body>
 </html>

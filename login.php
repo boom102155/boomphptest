@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,14 +36,14 @@
 					<img style="padding-top: 50px;" src="images/img-02.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="login_check_db.php">
 					<span class="login100-form-title">
 						Login
 					</span>
 
 					<!-- <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz"> -->
                     <div class="wrap-input100">
-						<input class="input100" type="text" name="uername" placeholder="Username" autocomplete="off" required>
+						<input class="input100" type="text" name="username" placeholder="Username" autocomplete="off" required>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-user" aria-hidden="true"></i>
