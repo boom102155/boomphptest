@@ -8,6 +8,12 @@ include("connect_db.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>user list</title>
+
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+    </script>
     
 </head>
 <body>
@@ -38,7 +44,7 @@ include("connect_db.php");
 
         <h2>รายชื่อผู้ใช้งาน</h2>
         <br>
-        <table class="table" style="padding-top: 5rem;">
+        <table id="example" class="table table-striped table-bordered" style="width: 100%;">
             <thead>
                 <tr>
                     <th>ID</th>
