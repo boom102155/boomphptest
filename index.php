@@ -47,12 +47,14 @@ include("connect_db.php");
                 <li class="nav-item active">
                     <a class="nav-link" href="index.php?menu=home">Home <span class="sr-only">(current)</span></a>
                 </li>
+                <!-- <div id="hideNormalUser"> -->
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?menu=regis">Register</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?menu=list">List</a>
                 </li>
+                <!-- </div> -->
                 <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Dropdown
@@ -76,6 +78,16 @@ include("connect_db.php");
             </form>
         </div>
     </nav>
+
+    <?php 
+    if(($_SESSION["user"]) == 1){ 
+        echo '<script>
+        $(document).ready(function(){
+            $(#hideNormalUser).hide()
+        });
+            </script>';
+    }  
+	?>
     
     
     <?php 

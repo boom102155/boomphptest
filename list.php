@@ -9,11 +9,11 @@ include("connect_db.php");
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>user list</title>
 
-    <script>
+    <!-- <script>
         $(document).ready(function() {
             $('#example').DataTable();
         });
-    </script>
+    </script> -->
     
 </head>
 <body>

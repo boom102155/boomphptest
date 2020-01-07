@@ -12,7 +12,7 @@
     if ($result->num_rows > 0) {
         echo '<script language="JavaScript">
                 alert("ลงชื่อเข้าใช้สำเร็จ");
-                window.location="index.php";
+                window.location="index.php?menu=home";
                 </script>';
         $_SESSION["user"] = "$username";
 
